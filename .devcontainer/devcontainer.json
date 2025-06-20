@@ -1,0 +1,22 @@
+{
+  "name": "PinaSafe Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.js-debug",
+        "esbenp.prettier-vscode",
+        "msjsdiag.vscode-react-native"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "forwardPorts": [8081, 19000, 19001, 19002],
+  "postCreateCommand": "npm install -g expo-cli && (npm install || true)",
+  "remoteUser": "node"
+}
