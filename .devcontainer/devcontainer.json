@@ -16,12 +16,7 @@
       }
     }
   },
-  "forwardPorts": [
-    8081,
-    19000,
-    19001,
-    19002
-  ],
-  "postCreateCommand": "npm install && npx expo install",
+  "forwardPorts": [8081, 19000, 19001, 19002],
+  "postCreateCommand": "[ -f package.json ] && npm install && npx expo install || echo 'No package.json found, skipping install.'",
   "remoteUser": "node"
 }
